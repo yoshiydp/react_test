@@ -1,0 +1,139 @@
+$mq-breakpoints: (
+  'sp-s': 361px,
+  'sp-l' : 376px,
+  'tb': 415px,
+  'tb-landscape': 769px,
+  'pc': 1025px
+);
+
+@mixin mq($breakpoint: tb) {
+  @media screen and (min-width: #{map-get($mq-breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
+
+@mixin vertical-center($position:relative,$left:null,$translateX:null) {
+  position: $position;
+  top: 50%;
+  @if $left != null{
+    left: $left;
+  }
+  @if $translateX != null{
+    transform: $translateX translateY(-50%);
+  } @else {
+    transform: translateY(-50%);
+  }
+}
+
+@mixin text-hidden {
+  overflow: hidden;
+  text-indent: 200%;
+  white-space: nowrap;
+}
+
+@mixin font-face($name, $file) {
+  @font-face {
+    font-family: "#{$name}";
+    src: url("../fonts/#{$file}.eot");
+    src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/#{$file}.woff") format("woff"),
+    url("../fonts/#{$file}.ttf") format("truetype"),
+    url("../fonts/#{$file}.svg?#webfont") format("svg");
+  }
+}
+
+@mixin border($way:all,$style:solid,$weight:.1rem,$color:$black_01) {
+  @if($way == all) {
+    border:$style $weight $color;
+  } @else if ($way == top) {
+    border-top:$style $weight $color;
+  } @else if ($way == right) {
+    border-right:$style $weight $color;
+  } @else if ($way == bottom) {
+    border-bottom:$style $weight $color;
+  } @else if ($way == left) {
+    border-left:$style $weight $color;
+  }
+}
+
+// 第一引数で基準となる画面幅のフォントサイズ、第二引数で基準となる画面幅を入力
+@function get_vw($size, $viewport:320){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin font-vw($font_size:10){
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+}
+
+@mixin absolute($top:null, $right:null, $bottom:null, $left:null){
+  position: absolute;
+  @if $top != null{
+    top: $top;
+  }
+  @if $right != null{
+    right: $right;
+  }
+  @if $bottom != null{
+    bottom: $bottom;
+  }
+  @if $left != null{
+    left: $left;
+  }
+}
+
+@mixin fixed($top:null, $right:null, $bottom:null, $left:null){
+  position: fixed;
+  @if $top != null{
+    top: $top;
+  }
+  @if $right != null{
+    right: $right;
+  }
+  @if $bottom != null{
+    bottom: $bottom;
+  }
+  @if $left != null{
+    left: $left;
+  }
+}
+
+@mixin relative($top:null, $right:null, $bottom:null, $left:null){
+  position: relative;
+  @if $top != null{
+    top: $top;
+  }
+  @if $right != null{
+    right: $right;
+  }
+  @if $bottom != null{
+    bottom: $bottom;
+  }
+  @if $left != null{
+    left: $left;
+  }
+}
+
+@mixin flex-layout($justify-content: center, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin transition($transition: all .5s ease,$hover-transition: all .5s ease,$opacity:null) {
+  transition: $transition;
+  &:hover {
+    @if $opacity != null{
+      opacity: $opacity;
+    }
+    transition: $hover-transition;
+  }
+}
+
+@mixin link-colors($def:$font-color_01,$hover:$font-color_01) {
+  color:$def;
+  &:hover {
+    color:$hover;
+  }
+}

@@ -1,0 +1,87 @@
+.l-gnav {
+  @include fixed($bottom:0,$left:0);
+  width: 100%;
+  max-width: 76.8rem;
+  border-radius: 4rem 4rem 0 0;
+  background: $clover-beige;
+  box-shadow: 0 -.4rem 1rem rgba(0,0,0,.05);
+  overflow: hidden;
+  z-index: 10;
+  @include mq(tb-landscape) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__list {
+    @include flex-layout;
+    width: 100%;
+
+    &__item {
+      width: calc(100%/4.5);
+      text-align: center;
+    }
+  }
+
+  a {
+    position: relative;
+    @include flex-layout(center,flex-end);
+    height: 7.4rem;
+    padding-bottom: 1rem;
+    @include font-def-bold;
+    font-size: 1.2rem;
+    line-height: 1;
+    @include link-colors($font-color_01,$clover-brown);
+
+    span {
+      display: block;
+    }
+  }
+
+  .notice {
+    @include absolute($top:-.6rem,$right:.3rem);
+    @include flex-layout;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: $clover-red;
+
+    span {
+      @include font-helvetica-bold;
+      font-size: 1.2rem;
+      color: $white;
+      line-height: 1;
+    }
+  }
+
+  // テーマごとのアイコン設定
+  .icon-home {
+    margin-bottom: 1.5rem;
+    font-size: 2.35rem;
+  }
+  .icon-fortune {
+    margin-bottom: 1.5rem;
+    font-size: 2.25rem;
+  }
+  .icon-bell {
+    position: relative;
+    display: block;
+    margin-bottom: 1.3rem;
+    font-size: 2.5rem;
+  }
+  .icon-mypage {
+    margin-bottom: 1.4rem;
+    font-size: 2.4rem;
+  }
+
+  .router-link-exact-active {
+    color: $clover-brown;
+    .icon-home,
+    .icon-fortune,
+    .icon-bell,
+    .icon-mypage {
+      &::before {
+        color: $clover-brown;
+      }
+    }
+  }
+}

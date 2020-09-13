@@ -1,0 +1,46 @@
+%selectCommon {
+  appearance: none;
+  padding: 1.15rem 1.8rem;
+  border: 0;
+  color: $font-color_01;
+  @include font-def-bold;
+  font-size: 1.4rem;
+  border-radius: 4rem;
+  background-image: url("#{$img-path}assets/images/common/arrow_down_signup.svg");
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-color: $gray_05;
+  &::placeholder {
+    color: $gray_07;
+    font-weight: bold;
+  }
+  &:focus {
+    outline: none;
+  }
+
+  .default {
+    display: none;
+  }
+
+  &.is-error {
+    @include border(all,solid,.2rem,$clover-red);
+  }
+}
+
+.c-select {
+  &--full {
+    @extend %selectCommon;
+    width: 14rem;
+    background-position: calc(100% - 1.8rem) calc(100% - 1.7rem);
+  }
+  &--medium {
+    @extend %selectCommon;
+    width: 9.8rem;
+    background-position: calc(100% - 1.3rem) calc(100% - 1.7rem);
+  }
+  &--small {
+    @extend %selectCommon;
+    width: 6rem;
+    background-position: calc(100% - .6rem) calc(100% - 1.7rem);
+  }
+}

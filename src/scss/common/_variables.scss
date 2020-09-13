@@ -1,0 +1,92 @@
+//*---------------------------------------
+// img path
+//---------------------------------------*/
+// $img-path:'/';
+$img-path:'/cloverchat/';
+//*---------------------------------------
+//  Color
+//---------------------------------------*/
+$body-color: #fff;
+$font-color_01: #666;
+$font-color_02: #888;
+$white: #fff;
+$black: #000;
+$yellow: #F2C94C;
+$blue: #0000ff;
+
+$gray_01: #666;
+$gray_02: #888;
+$gray_03: #BDBDBD;
+$gray_04: #E0E0E0;
+$gray_05: #F2F2F2;
+$gray_06: #828282;
+$gray_07: #ccc;
+$gray_08: #efefef;
+
+$line-green: #00B900;
+$clover-green: #71AD45;
+$clover-green-alart: #62CC2B;
+$clover-pink: #E6739D;
+$clover-brown: #996B3D;
+$clover-orange: #FFAC59;
+$clover-beige: #FFF7F2;
+$clover-red: #CC4429;
+//*---------------------------------------
+//  Font
+// ---------------------------------------*/
+$font-default: 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', sans-serif;
+$font-SFPro: -apple-system, BlinkMacSystemFont;
+$font-helvetica: Helvetica Neue;
+
+@mixin font-def {
+  font-family: $font-default;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin font-def-medium {
+  font-family: $font-default;
+  font-weight: 500;
+  font-style: normal;
+}
+@mixin font-def-semi-bold {
+  font-family: $font-default;
+  font-weight: 600;
+  font-style: normal;
+}
+@mixin font-def-bold {
+  font-family: $font-default;
+  font-weight: 700;
+  font-style: normal;
+}
+@mixin font-SFPro-regular {
+  font-family: $font-SFPro;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin font-SFPro-medium {
+  font-family: $font-SFPro;
+  font-weight: 500;
+  font-style: normal;
+}
+@mixin font-SFPro-semi-bold {
+  font-family: $font-SFPro;
+  font-weight: 600;
+  font-style: normal;
+}
+@mixin font-SFPro-bold {
+  font-family: $font-SFPro;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin font-helvetica-regular {
+  font-family: $font-helvetica;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-helvetica-bold {
+  font-family: $font-helvetica;
+  font-weight: 700;
+  font-style: normal;
+}

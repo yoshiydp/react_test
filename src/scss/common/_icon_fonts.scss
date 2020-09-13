@@ -1,0 +1,239 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('#{$img-path}fonts/icomoon.eot?nn6kfi');
+  src:  url('#{$img-path}fonts/icomoon.eot?nn6kfi#iefix') format('embedded-opentype'),
+    url('#{$img-path}fonts/icomoon.ttf?nn6kfi') format('truetype'),
+    url('#{$img-path}fonts/icomoon.woff?nn6kfi') format('woff'),
+    url('#{$img-path}fonts/icomoon.svg?nn6kfi#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-light:before {
+  content: "\e934";
+  color: #828282;
+}
+.icon-arrow_review:before {
+  content: "\e933";
+  color: #ccc;
+}
+.icon-star_stroke:before {
+  content: "\e900";
+  color: #ffac59;
+}
+.icon-able_review:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-answer:before {
+  content: "\e902";
+  color: #71ad45;
+}
+.icon-arrow_down_signup:before {
+  content: "\e903";
+  color: #888;
+}
+.icon-arrow_link:before {
+  content: "\e904";
+  color: #888;
+}
+.icon-arrow_news:before {
+  content: "\e905";
+  color: #888;
+}
+.icon-arrow_setting:before {
+  content: "\e906";
+  color: #666;
+}
+.icon-arrow_shaman_comment:before {
+  content: "\e907";
+  color: #71ad45;
+}
+.icon-arrow-right:before {
+  content: "\e908";
+  color: #ccc;
+}
+.icon-arrow:before {
+  content: "\e909";
+  color: #666;
+}
+.icon-back:before {
+  content: "\e90a";
+  color: #bdbdbd;
+}
+.icon-beginner:before {
+  content: "\e90b";
+  color: #71ad45;
+}
+.icon-bell_news:before {
+  content: "\e90c";
+  color: #cc4429;
+}
+.icon-bell_newsbar:before {
+  content: "\e90d";
+  color: #62cc2b;
+}
+.icon-bell:before {
+  content: "\e90e";
+  color: #888;
+}
+.icon-chat_review:before {
+  content: "\e90f";
+  color: #71ad45;
+}
+.icon-check_chat_reserve:before {
+  content: "\e910";
+  color: #e6739d;
+}
+.icon-check_coupon:before {
+  content: "\e911";
+  color: #ccc;
+}
+.icon-check_partner:before {
+  content: "\e912";
+  color: #e6739d;
+}
+.icon-check_shaman_type .path1:before {
+  content: "\e913";
+  color: rgb(125, 170, 82);
+}
+.icon-check_shaman_type .path2:before {
+  content: "\e914";
+  margin-left: -0.962890625em;
+  color: rgb(255, 255, 255);
+}
+.icon-check:before {
+  content: "\e915";
+  color: #ccc;
+}
+.icon-close:before {
+  content: "\e916";
+  color: #888;
+}
+.icon-comment:before {
+  content: "\e917";
+  color: #888;
+}
+.icon-coupon_percent:before {
+  content: "\e918";
+  color: #fff;
+}
+.icon-coupon_time:before {
+  content: "\e919";
+  color: #fff;
+}
+.icon-coupon_yen:before {
+  content: "\e91a";
+  color: #fff;
+}
+.icon-credit_card:before {
+  content: "\e91b";
+  color: #fff;
+}
+.icon-family_mart:before {
+  content: "\e91c";
+  color: #fff;
+}
+.icon-flow:before {
+  content: "\e91d";
+  color: #e0e0e0;
+}
+.icon-fortune:before {
+  content: "\e91e";
+  color: #888;
+}
+.icon-heart_active:before {
+  content: "\e91f";
+  color: #fff7f2;
+}
+.icon-heart:before {
+  content: "\e920";
+  color: #996b3d;
+}
+.icon-home:before {
+  content: "\e921";
+  color: #888;
+}
+.icon-login:before {
+  content: "\e922";
+  color: #828282;
+}
+.icon-logout:before {
+  content: "\e923";
+  color: #71ad45;
+}
+.icon-moon:before {
+  content: "\e924";
+  color: #888;
+}
+.icon-mypage:before {
+  content: "\e925";
+  color: #888;
+}
+.icon-people:before {
+  content: "\e926";
+  color: #cc4429;
+}
+.icon-phone:before {
+  content: "\e927";
+  color: #71ad45;
+}
+.icon-question_inquiry:before {
+  content: "\e928";
+  color: #e6739d;
+}
+.icon-question:before {
+  content: "\e929";
+}
+.icon-reply:before {
+  content: "\e92a";
+  color: #fff;
+}
+.icon-review:before {
+  content: "\e92b";
+  color: #e6739d;
+}
+.icon-search_narrow:before {
+  content: "\e92c";
+  color: #996b3d;
+}
+.icon-search:before {
+  content: "\e92d";
+  color: #666;
+}
+.icon-sheet:before {
+  content: "\e92e";
+  color: #71ad45;
+}
+.icon-speaker:before {
+  content: "\e92f";
+  color: #666;
+}
+.icon-star:before {
+  content: "\e930";
+  color: #ffac59;
+}
+.icon-time:before {
+  content: "\e931";
+  color: #fff;
+}
+.icon-turn_waiting:before {
+  content: "\e932";
+  color: #fff;
+}

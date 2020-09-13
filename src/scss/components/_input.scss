@@ -1,0 +1,39 @@
+%inputCommon {
+  appearance: none;
+  padding: 1.15rem 1.8rem;
+  border: 0;
+  color: $font-color_01;
+  @include font-def-bold;
+  font-size: 1.4rem;
+  border-radius: 4rem;
+  background: $gray_05;
+  &::placeholder {
+    color: $gray_07;
+    font-weight: bold;
+  }
+  &:focus {
+    outline: none;
+  }
+
+  &.is-error {
+    @include border(all,solid,.2rem,$clover-red);
+  }
+}
+
+.c-input {
+  &--full {
+    @extend %inputCommon;
+    width: 29.5rem;
+  }
+
+  &--medium {
+    @extend %inputCommon;
+    width: 14rem;
+    margin: 0 .75rem;
+  }
+
+  &--radio,
+  &--checkbox {
+    display: none;
+  }
+}

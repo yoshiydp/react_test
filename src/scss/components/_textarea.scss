@@ -1,0 +1,16 @@
+.c-textarea {
+  width: 100%;
+  padding: .8rem;
+  @include border(all,solid,.1rem,$gray_03);
+  border-radius: .5rem;
+  @include font-def;
+  color: $font-color_01;
+  font-size: 1.2rem;
+  &::placeholder {
+    color: $gray_07;
+    font-weight: bold;
+  }
+  &:focus {
+    outline: none;
+  }
+}

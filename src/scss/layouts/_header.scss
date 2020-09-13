@@ -1,0 +1,104 @@
+.l-header {
+  @include fixed($top:0,$left:0);
+  width: 100%;
+  max-width: 76.8rem;
+  height: 8.8rem;
+  background: url("#{$img-path}assets/images/common/bg_header.png") center bottom;
+  z-index: 990;
+  @include mq(tb-landscape) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__title {
+    @include absolute($top:5rem);
+    width: 100%;
+    text-align: center;
+    @include font-def-bold;
+    color: $font-color_02;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: .041em;
+
+    &.page-home {
+      top: 5.4rem;
+      left: 2.8rem;
+      font-size: 1.5rem;
+      @include mq(tb-landscape) {
+        top: 5rem;
+        left: auto;
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &__logo {
+    @include absolute($top:3.6rem,$left:1.6rem);
+    width: 10rem;
+  }
+
+  &__back {
+    @include absolute($top:5.3rem,$left:1.3rem);
+    width: 2.6rem;
+
+    a {
+      @include flex-layout;
+      width: 2.6rem;
+      height: 2.5rem;
+    }
+
+    .icon-back {
+      font-size: 2.1rem;
+    }
+  }
+
+  &__nav {
+    @include absolute($right:.4rem,$bottom:0);
+    @include flex-layout;
+    max-width: 14.4rem;
+    height: 4.8rem;
+
+    &__item {
+      @include flex-layout;
+      flex: none;
+      width: 3.8rem;
+    }
+
+    %icon {
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    &__icon {
+      @extend %icon;
+      display: block;
+      margin-bottom: .4rem;
+      &--question {
+        @extend %icon;
+        @include flex-layout;
+        width: 2rem;
+        height: 2rem;
+        margin: 0 auto .3rem;
+        @include border(all,solid,.2rem,#828282);
+        border-radius: 50%;
+      }
+      &--light {
+        text-align: center;
+        display: block;
+        margin-bottom: .2rem;
+        font-size: 2.1rem;
+      }
+    }
+
+    &__text {
+      text-align: center;
+      @include font-def-bold;
+      font-size: 1rem;
+      transform: scale(.9);
+    }
+
+    a {
+      display: block;
+    }
+  }
+}

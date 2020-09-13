@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  content:'';
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+  max-width: 76.8rem;
+  margin: 0 auto;
+  @include font-def;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: $body-color;
+  word-wrap: break-word;
+  text-size-adjust: 100%;
+  overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
+  background: #fff;
+}
+
+img {
+  display:block;
+  width: 100%;
+  height: auto;
+  line-height:1;
+  backface-visibility: hidden;
+}
+
+svg {
+  width: 100%;
+}
+
+a {
+  @include link-colors;
+  text-decoration: none;
+}
+
+p,dt,dd,li,h1,h2,h3,h4,h5,h6,a {
+  color: $font-color_01;
+  font-feature-settings: "palt";
+  // letter-spacing: .1em;
+}
+
+p,dt,dd,li,a {
+  @include font-def;
+}
+
+.l-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 8.8rem;
+  overflow: hidden;
+}
+
+.l-inner {
+  position: relative;
+  margin: 0 1.6rem;
+}
+
+.slide-in-enter-active, .slide-in-leave-active {
+  transition: opacity .3s ease;
+}
+
+.slide-in-enter, .slide-in-leave-to {
+  opacity: 0;
+}
