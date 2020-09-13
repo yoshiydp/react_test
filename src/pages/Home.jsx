@@ -1,9 +1,9 @@
 import React from 'react';
-import '../scss/pages/home.scss';
+import styles from '../scss/pages/home.module.scss';
 
 function Home() {
   return (
-    <div>
+    <div className={styles.home}>
       <p>Home page</p>
     </div>
   );

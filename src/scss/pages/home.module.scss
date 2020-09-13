@@ -1,0 +1,9 @@
+@import "../common/variables";
+@import "../common/mixins";
+
+.home {
+  width: 100%;
+  @include flex-layout;
+  padding: 10rem 0;
+  background: #efefef;
+}

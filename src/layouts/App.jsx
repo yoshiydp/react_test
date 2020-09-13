@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import '../scss/common.scss';
+import styles from '../scss/common.module.scss';
 import logo from '../logo.svg';
 
 // Defalut page
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className={styles.appLogo} alt="logo" />
       </header>
       <BrowserRouter>
         <Switch>
